@@ -4,8 +4,9 @@
   "description": "A professional front-end template for building web apps or sites",
   "main": "index.js",
   "scripts": {
+    "htmlhint": "npx htmlhint",
     "jsonlint": "npx jsonlint --diff --continue \"**/*.json\" \"!**/node_modules\"",
-    "lint": "npm run jsonlint && npm run npmPkgJsonLint && npm run prettier && npm run v8r && npm run markdownlint && npm run markdown-link-check && npm run markdown-table-formatter",
+    "lint": "npm run htmlhint && npm run jsonlint && npm run npmPkgJsonLint && npm run prettier && npm run v8r && npm run markdownlint && npm run markdown-link-check && npm run markdown-table-formatter",
     "markdown-link-check": "npx markdown-link-check --config .markdown-link-check.json README.md",
     "markdownlint": "npx markdownlint . --ignore-path .gitignore",
     "markdown-table-formatter": "npx markdown-table-formatter --check README.md",
@@ -28,6 +29,7 @@
   "homepage": "https://github.com/bebehr/frontend#readme",
   "devDependencies": {
     "@prantlf/jsonlint": "^16.0.0",
+    "htmlhint": "^1.1.4",
     "markdown-link-check": "^3.12.2",
     "markdownlint-cli": "^0.42.0",
     "npm-package-json-lint": "^8.0.0",
