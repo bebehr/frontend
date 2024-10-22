@@ -10,9 +10,10 @@
 .htmlhintrc export-ignore
 
 # CONFIGS
-/.editorconfig  export-ignore
-/.gitattributes export-ignore
-/.gitignore     export-ignore
+/.editorconfig              export-ignore
+/.gitattributes             export-ignore
+/.gitignore                 export-ignore
+/.npmpackagejsonlintrc.json export-ignore
 
 # GRAPHICS
 *.ai   binary
