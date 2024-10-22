@@ -13,6 +13,8 @@
 /.editorconfig              export-ignore
 /.gitattributes             export-ignore
 /.gitignore                 export-ignore
+/.markdown-link-check.json  export-ignore
+/.markdownlint.json         export-ignore
 /.npmpackagejsonlintrc.json export-ignore
 /.prettierignore            export-ignore
 /.prettierrc.json           export-ignore

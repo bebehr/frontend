@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "jsonlint": "npx jsonlint --diff --continue \"**/*.json\" \"!**/node_modules\"",
-    "lint": "npm run jsonlint && npm run npmPkgJsonLint && npm run prettier && npm run v8r",
+    "lint": "npm run jsonlint && npm run npmPkgJsonLint && npm run prettier && npm run v8r && npm run markdownlint && npm run markdown-link-check && npm run markdown-table-formatter",
+    "markdown-link-check": "npx markdown-link-check --config .markdown-link-check.json README.md",
+    "markdownlint": "npx markdownlint . --ignore-path .gitignore",
+    "markdown-table-formatter": "npx markdown-table-formatter --check README.md",
     "npmPkgJsonLint": "npx npmPkgJsonLint . --ignorePath .gitignore",
     "prettier": "npx prettier . --check",
-    "v8r": "npx v8r .npmpackagejsonlintrc.json .prettierrc.json --schema https://json.schemastore.org/prettierrc.json package.json"
+    "v8r": "npx v8r .markdown-link-check.json .markdownlint.json .npmpackagejsonlintrc.json .prettierrc.json --schema https://json.schemastore.org/prettierrc.json package.json"
   },
   "repository": {
     "type": "git",
@@ -25,9 +28,14 @@
   "homepage": "https://github.com/bebehr/frontend#readme",
   "devDependencies": {
     "@prantlf/jsonlint": "^16.0.0",
+    "markdown-link-check": "^3.12.2",
+    "markdownlint-cli": "^0.42.0",
     "npm-package-json-lint": "^8.0.0",
     "npm-package-json-lint-config-default": "^7.0.1",
     "prettier": "^3.3.3",
     "v8r": "^4.1.0"
+  },
+  "dependencies": {
+    "markdown-table-formatter": "^1.6.1"
   }
 }
