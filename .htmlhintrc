@@ -17,7 +17,34 @@
   "attr-whitespace": true,
   "alt-require": true,
   "input-requires-label": true,
-  "tags-check": true,
+  "tags-check": {
+    "a": {
+      "selfclosing": false,
+      "attrsRequired": ["href", "title"],
+      "redundantAttrs": ["alt"]
+    },
+    "div": {
+      "selfclosing": false
+    },
+    "main": {
+      "selfclosing": false,
+      "redundantAttrs": ["role"]
+    },
+    "nav": {
+      "selfclosing": false,
+      "redundantAttrs": ["role"]
+    },
+    "script": {
+      "attrsOptional": [
+        ["async", "async"],
+        ["defer", "defer"]
+      ]
+    },
+    "img": {
+      "selfclosing": true,
+      "attrsRequired": ["src", "alt", "title"]
+    }
+  },
   "tag-pair": true,
   "tag-self-close": false,
   "tagname-lowercase": true,
