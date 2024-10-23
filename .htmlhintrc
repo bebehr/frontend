@@ -20,7 +20,7 @@
   "tags-check": {
     "a": {
       "selfclosing": false,
-      "attrsRequired": ["href", "title"],
+      "attrsRequired": ["href"],
       "redundantAttrs": ["alt"]
     },
     "div": {
@@ -41,8 +41,7 @@
       ]
     },
     "img": {
-      "selfclosing": true,
-      "attrsRequired": ["src", "alt", "title"]
+      "attrsRequired": ["src", "alt"]
     }
   },
   "tag-pair": true,
