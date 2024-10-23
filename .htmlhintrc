@@ -41,7 +41,7 @@
       ]
     },
     "img": {
-      "attrsRequired": ["src", "alt"]
+      "attrsRequired": ["src"]
     }
   },
   "tag-pair": true,
