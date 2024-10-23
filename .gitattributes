@@ -3,6 +3,7 @@
 
 # SOURCE CODE
 *.css  diff=css
+*.htm  diff=html
 *.html diff=html
 *.md   diff=markdown
 
