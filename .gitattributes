@@ -14,6 +14,7 @@
 /.npmpackagejsonlintrc.json export-ignore
 /.prettierignore            export-ignore
 /.prettierrc.json           export-ignore
+/.stylelintrc.json          export-ignore
 
 # CONFIGS
 /.editorconfig  export-ignore

@@ -6,13 +6,14 @@
   "scripts": {
     "htmlhint": "npx htmlhint",
     "jsonlint": "npx jsonlint --diff --continue \"**/*.json\" \"!**/node_modules\"",
-    "lint": "npm run htmlhint && npm run jsonlint && npm run npmPkgJsonLint && npm run prettier && npm run v8r && npm run markdownlint && npm run markdown-link-check && npm run markdown-table-formatter",
+    "lint": "npm run htmlhint && npm run stylelint && npm run jsonlint && npm run npmPkgJsonLint && npm run prettier && npm run v8r && npm run markdownlint && npm run markdown-link-check && npm run markdown-table-formatter",
     "markdown-link-check": "npx markdown-link-check --config .markdown-link-check.json README.md",
-    "markdownlint": "npx markdownlint . --ignore-path .gitignore",
     "markdown-table-formatter": "npx markdown-table-formatter --check README.md",
+    "markdownlint": "npx markdownlint . --ignore-path .gitignore",
     "npmPkgJsonLint": "npx npmPkgJsonLint . --ignorePath .gitignore",
     "prettier": "npx prettier . --check",
-    "v8r": "npx v8r .markdown-link-check.json .markdownlint.json .npmpackagejsonlintrc.json .prettierrc.json --schema https://json.schemastore.org/prettierrc.json package.json"
+    "stylelint": "npx stylelint \"**/*.css\"",
+    "v8r": "npx v8r .markdown-link-check.json .markdownlint.json .npmpackagejsonlintrc.json .prettierrc.json --schema https://json.schemastore.org/prettierrc.json package.json .stylelintrc.json"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,8 @@
     "npm-package-json-lint": "^8.0.0",
     "npm-package-json-lint-config-default": "^7.0.1",
     "prettier": "^3.3.3",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard": "^36.0.1",
     "v8r": "^4.1.0"
   },
   "dependencies": {
